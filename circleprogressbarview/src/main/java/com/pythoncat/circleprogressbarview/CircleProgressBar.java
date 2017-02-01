@@ -125,6 +125,7 @@ public class CircleProgressBar extends View {
     }
 
     private void drawProgress(Canvas canvas) {
+        if (progress >= 100) progress = 100;
         mPaint.setColor(progressColor);
         if (useCenter) {
             oval.set(0, 0, mRadius * 2, mRadius * 2);
